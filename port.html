@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="port.css">
+    <title>Tushar Dasare</title>
+    <style>
+        :root{
+    --primary: #00b9f1;
+    --text: #666565;
+}
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text);
+    background-color: var(--primary);
+    margin-bottom: 70px;
+}
+hr{
+    height: 2px;
+    background-color: #dbdbdb;
+    border: none;
+}
+#nav{
+    z-index: 10;
+    display: none;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    border-radius: 4px 4px 0 0;
+    background-color: #a7a7a767;
+    backdrop-filter: blur(10px);
+}
+#nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    margin: 12px auto;
+}
+#nav ul li{
+    list-style-type: none;
+    padding: 8px;
+}
+#nav ul li a{
+    padding: 8px;
+    text-decoration: none;
+    color: var(--text);
+    border-radius: 4px;
+    transition: .2s ease-in-out;
+}
+#nav ul li a:hover{
+    background-color: #b4b4b4;
+    border-bottom: 2px solid var(--primary);
+}
+
+#main, #about{
+    width: 80%;
+    margin: 10px auto;
+    padding: 32px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+#main{
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+#main-content{
+    display: block;
+    width: 100%;
+    height: 50%;
+    padding: 0;
+    background-color: white;
+}
+#main-content img{
+    width: 100%;
+    height: 50%;
+}
+#social-media{
+    display: flex;
+    justify-content: center;
+}
+#social-media a{
+    margin: 0 8px;
+    padding: 8px;
+    text-decoration: none;
+    color: black;
+}
+#main-buts{
+    display: flex;
+    justify-content: space-around;
+}
+#main-buts button{
+    width: 49%;
+    padding: 8px;
+    margin: 12px;
+    background-color: white;
+    border: 2px solid var(--primary);
+}
+#intro{
+    margin: 0 auto;
+}
+#my-skills{
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+#my-skills div{
+    display: flex;
+    width: 45%;
+    margin: 8px 0;
+    justify-content: space-around;
+    align-items: stretch;
+    flex-direction: column;
+    text-align: center;
+}
+#coding{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.progress{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 50%;
+    animation: fillup 0s ease;
+}
+.progress:nth-child(1){
+    background: conic-gradient(var(--primary) 0deg, var(--primary) 216deg, #f0f0f0 216deg, #f0f0f0 360deg);
+}
+.progress:nth-child(2){
+    background: conic-gradient(var(--primary) 0deg, var(--primary) 216deg, #f0f0f0 216deg, #f0f0f0 360deg);
+}
+.progress:nth-child(3){
+    background: conic-gradient(var(--primary) 0deg, var(--primary) 342deg, #f0f0f0 342deg, #f0f0f0 360deg);
+}
+.progress:nth-child(4){
+    background: conic-gradient(var(--primary) 0deg, var(--primary) 306deg, #f0f0f0 306deg, #f0f0f0 360deg);
+}
+.progress:nth-child(5){
+    background: conic-gradient(var(--primary) 0deg, var(--primary) 180deg, #f0f0f0 180deg, #f0f0f0 360deg);
+}
+#coding .progress p{
+    margin-top:30px;
+    text-align: center;
+}
+.progress .label{
+    width: 78px;
+    height: 78px;
+    position: relative;
+    top: 11px;
+    left: 11px;
+    padding-top: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: white;
+}
+@keyframes fillup {
+    0%{
+        background-image: conic-gradient(var(--primary) 0deg, var(--primary) 0deg, #f0f0f0 0deg, #f0f0f0 360deg);
+    }
+    100%{
+        background-image: conic-gradient(var(--primary) 0deg, var(--primary) 288deg, #f0f0f0 289deg, #f0f0f0 360deg);
+
+    }
+}
+#myworks img{
+    width: 500px;
+    margin: 20px;
+}
+#education{
+    width: 60%;
+    margin: 20px auto;
+    display: flex;
+}
+#details{
+    width: 100%;
+}
+.lines{
+    margin-left: 40px;
+    margin-top: 20px;
+    margin-right: 12px;
+}
+.dot{
+    width: 14px;
+    height: 14px;
+    margin-top: -2px;
+    background: #b4b4b4;
+    border-radius: 7px;
+}
+.line{
+    height: 198px;
+    width: 6px;
+    margin-left: 4px;
+    margin-top: -2px;
+    background: #b4b4b4;
+}
+#touch{
+    display: flex;
+    justify-content: space-evenly;
+}
+#contact{
+    width: 45%;
+}
+#contact a{
+    text-decoration: none;
+    color: var(--text);
+}
+#contact a:hover{
+    color: var(--primary);
+}
+.divider{
+    width: 2px;
+    background-color: #b4b4b4;
+}
+#sendmail{
+    width: 45%;
+    padding: 20px;
+}
+input{
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 4px;
+    border: 1px solid var(--text);
+}
+#sendmail button{
+    display: block ;
+    padding: 8px;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+}
+#sendmail button{
+    text-decoration: none;
+    color: var(--text);
+}
+
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#my-skills">Skills</a></li>
+            <li><a href="#myworks">Projects</a></li>
+            <li><a href="#touch">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="main">
+        <div id="main-content">
+            <img src="https://i.ibb.co/8XTkhT5/hero.png" alt="aj">
+            <h2 style="text-align: center;">TUSHAR DASARE</h2>
+            <p style="text-align: center;color: green;">Web Developer</p>
+            <div id="social-media">
+                <a href="#" class="fa fa-github"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+            <div id="main-buts">
+                <button>Download CV</button>
+                <button>Contact me</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div id="intro">
+            <h2>About Me</h2>
+            <hr>
+            <p><strong>Hello I'm Tushar Dasare</strong></p>
+            <p>I am pursuing bachelor's degree in Computer Technology. 
+                I am a learning enthusiast. I am looking for an opportunity 
+                in the relevant field where I can learn and upgrade my skills 
+                to become a profitable asset to the company. My objective is 
+                to implement the best of my knowledge in the development practices.</p>
+        </div>
+
+        <h2>My skills</h2>
+        <hr>
+        <div id="my-skills">
+            <div>
+                <img src="https://i.ibb.co/gwL79cw/web.png" style="width: 100px;margin: 0 auto;" alt="" srcset="">
+                <strong>Web Development</strong>
+                <p>Modern, mobile-frinedly and responsive web designing
+                    that will help you to deliver content in an effective way.
+                </p>
+            </div>
+            <div>
+                <img src="https://i.ibb.co/gwL79cw/python.png" style="width: 100px;margin: 0 auto;" alt="" srcset="">
+                <strong>Python Programming</strong>
+                <p>Python is my language of communication with computers.
+                </p>
+            </div>
+        </div>
+
+        <h2>Coding</h2>
+        <hr>
+        <div id="coding">
+            <div class="progress">
+                <div class="label">60%</div>
+                <p>Python</p>
+            </div>
+            <div class="progress">
+                <div class="label">60%</div>
+                <p>Django</p>
+            </div>
+            <div class="progress">
+                <div class="label">95%</div>
+                <p>HTML</p>
+            </div>
+            <div class="progress">
+                <div class="label">85%</div>
+                <p>CSS</p>
+            </div>
+            <div class="progress">
+                <div class="label">50%</div>
+                <p>JavaScript</p>
+            </div>
+        </div>
+
+        <h2>My Work</h2>
+        <hr>
+        <div id="myworks">
+            <img src="https://i.ibb.co/3TK8Qrx/work2.png" alt="work1">
+        </div>
+
+        <h2>My Education</h2>
+        <hr>
+        <div id="education">
+            
+            <div class="lines">
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+                <div class="line"></div>
+                <div class="dot"></div>
+                <div class="line"></div>
+            </div>
+            
+            <div id="details">
+                <p>2019-2023</p>
+                <h4>Bachelor Of Engineering</h4>
+                <p>Nagpur</p>
+                <p>Bachelor's Degree in Computer Technology,<br>
+                    Priyadarshini College Of Engineering,<br>
+                    Nagpur
+                </p>
+                <hr>
+                <p>2017-2018</p>
+                <h4>H.S.C Science</h4>
+                <p>Nagpur</p>
+                <p>Higher secondary Course in Science,<br>
+                    Vande Mataram Jr. College,<br>
+                    Nagpur
+                </p>
+                <hr>
+                <p>2017</p>
+                <h4>S.S.C</h4>
+                <p>Nagpur</p>
+                <p>Charisma English Convent,<br>Nagpur
+                </p>
+                <hr>
+            </div>
+        </div>
+
+        <h2>Get in touch</h2>
+        <hr>
+        <div id="touch">
+            <div id="contact">
+                <h4>Address</h4>
+                <Address>340, Akash Nagar, Manewada road, Nagpur</Address>                
+                <h4>Mobile</h4>
+                <a href="tel:+917304431820">+91 7304431820</a>
+                <h4>Email</h4>
+                <a href="mailto:tushardasare1701@gmail.com">tushardasare1701@gmail.com</a>
+            </div>
+            <div class="divider"></div>
+            <div id="sendmail">
+                <h4>Leave a Mail</h4>
+                <input type="email" name="" id="mail-email" placeholder="Enter your email id..." value="" required>
+                <input type="text" id="mail-subject" placeholder="Enter Subject..." value="">
+                <input type="text" id="mail-body" style="padding-bottom:30px;" value="" placeholder="Enter Message...">
+                <input type="password" name="" id="mail-pass" placeholder="Enter your password..." value="" required>
+                <button onclick=func()>Send Mail</button>
+            </div>
+        </div>
+    </div>
+     
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function func(){
+            var password = document.getElementById('mail-pass').value;
+            var email = document.getElementById('mail-email').value;
+            var subject = document.getElementById('mail-subject').value;
+            var body = document.getElementById('mail-body').value;
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: email,
+                Password: password,
+                To: "tushardasare1701@gmail.com",
+                From: email,
+                Subject: subject,
+                Body: body,
+            }).then(function (message){
+                alert('Mail sent to tushardasare1701@gmail.com')
+            });
+
+        }
+    </script>
+
+</body>
+</html>
